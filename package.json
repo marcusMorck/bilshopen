@@ -9,6 +9,8 @@
     "author": "marcusMorck",
     "license": "ISC",
     "dependencies": {
+        "access-manager": "^1.1.2",
+        "bcrypt": "^2.0.1",
         "body-parser": "^1.18.3",
         "bootstrap": "^4.1.1",
         "express": "^4.16.3",

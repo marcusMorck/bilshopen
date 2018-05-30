@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="sv">
     <head>
       <meta charset="utf-8">
@@ -6,30 +7,29 @@
       <meta name="author" content="">
       <title>Bilshoppen - Vi har bilen för dig!</title>
       <!-- Bootstrap core CSS -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-      <!--<link href="style/bootstrap.min.css" rel="stylesheet">-->
+
+      <link href="/style/bootstrap.min.css" rel="stylesheet">
       <!-- Custom styles for this template -->
       <link href="style/style.css" rel="stylesheet">
   </head>
   <body>
-        <h1>Hej</h1>
+        
     <div id="app">
       <nav-menu></nav-menu>
-      <welcome></welcome>
+      
+      <router-view></router-view>
     </div> <!-- end vue app -->
   
     <!-- Bootstrap core JavaScript
       ================================================== -->
       <!-- Placed at the end of the document so the pages load faster -->
       <script src="libs/jquery-3.3.1.min.js"></script>
-      <script src="libs/popper.min.js"></script>
-      <script src="libs/axios.min.js"></script>
-      <script src="libs/bootstrap.min.js"></script>
-      <script src="libs/vue.js"></script>
-      <script src="libs/vue-router.js"></script>
-      <script src="libs/vuex.js"></script>
+      <script src="/libs/popper.min.js"></script>
+      <script src="/libs/axios.min.js"></script>
+      <script src="/libs/bootstrap.min.js"></script>
+      <script src="/libs/vue.js"></script>
+      <script src="/libs/vue-router.js"></script>
+      <script src="/libs/vuex.js"></script>
   
       <!-- components -->
       <script src="components/welcome.js"></script>
