@@ -22,10 +22,24 @@ const accessManager = new AccessManager({
 
 
 // Models
+const Product = require('./models/product.js');
 const User = accessManager.models.user;
 //Catch get request and send them to index.html, except /rest
 app.get(/^((?!rest).)*$/, async(req, res)=>{
   res.sendFile(path.normalize(__dirname + '/../client/index.html'));
+});
+
+
+app.post('/rest/products', async(req, res)=>{
+  //res.send('We would create a product');
+  let product = await new Product(req.body);
+  try{
+    product.save();
+    res.json(product);
+  }catch(err){
+    console.error(err);
+    res.json(err);
+  }
 });
 
 // start the express HTTP server
