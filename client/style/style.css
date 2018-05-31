@@ -1,10 +1,7 @@
 body{
     
-    
-    background-size:cover;
-    background-attachment: fixed;
     min-height:100vh;
-    padding:2vmax;
+    
   }
   .cart-item-amount input{
     max-width: 40px;
@@ -19,6 +16,14 @@ body{
     font-weight: bold;
   }
 
-  .container.navbar-brand{
-    color: blue;
+  .navbar {
+    margin-bottom: 20px;
   }
+
+  .test{
+    background-image: url('/client/images/ferrari458italia.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  } 
+
+ 

@@ -8,5 +8,7 @@
     {"path":"/rest/admin*", "roles":[ {"role": "admin", "methods": ["ALL"]} ]},
     {"path":"/rest/pay", "roles":[ {"role": "user", "methods": ["POST"]} ]},
     {"path":"/rest/cart", "roles":[ {"role": "*", "methods": ["*"]} ]},
-    {"path":"/", "roles":[ {"role": "*", "methods": ["GET"]} ]}
+    {"path":"/", "roles":[ {"role": "*", "methods": ["GET"]} ]},
+    {"path":"/cart", "roles":[ {"role": "*", "methods": ["GET"]} ]},
+    {"path":"/client/images/ferrari458italia.jpg", "roles":[ {"role": "*", "methods": ["GET"]} ]}
   ]
