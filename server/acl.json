@@ -10,5 +10,6 @@
     {"path":"/rest/cart", "roles":[ {"role": "*", "methods": ["*"]} ]},
     {"path":"/", "roles":[ {"role": "*", "methods": ["GET"]} ]},
     {"path":"/cart", "roles":[ {"role": "*", "methods": ["GET"]} ]},
+    {"path":"/products", "roles":[ {"role": "*", "methods": ["GET"]} ]},
     {"path":"/client/images/ferrari458italia.jpg", "roles":[ {"role": "*", "methods": ["GET"]} ]}
   ]

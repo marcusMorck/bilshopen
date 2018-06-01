@@ -1,7 +1,8 @@
 const CartPageComponent = {
   template: `
   <div class=row>
-      <cart class= "col-12"></cart>
+      <cart class="col-12"></cart>
+      
       <div class="col-12">
       <label for="first-name">Förnamn:</label>
       <input name="first-name" v-model="firstName"></input>
