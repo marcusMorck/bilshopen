@@ -131,6 +131,58 @@ app.get('/rest/cart', async(req, res)=>{
   res.json(cart);
 });
 
+// User access paths:
+
+app.post('/rest/register', async (req, res)=>{
+  // encrypt password
+  req.body.password = await bcrypt.hash(req.body.password, saltRounds);
+  // create user
+  let user = await new User(req.body);
+  user.roles = ["user"];
+  await user.save();
+  res.json({msg:'Registered'});
+});
+
+app.post('/rest/login', async (req, res, next)=>{
+  // find user
+  let user = await User.findOne({email: req.body.email});
+  // passwords match?
+  if(user && await bcrypt.compare(req.body.password, user.password)){
+    req.session.user = user._id;
+    req.session.loggedIn = true;
+    await req.session.save(); // save the state
+    res.json(user);
+  }else{
+    res.json({msg:'Failed login'});
+  }
+});
+
+app.all('/rest/logout', async (req, res)=>{
+  req.user = {}; // we clear the user
+  // CLEAR THE SESSION CART!!
+  if(req.session.cart){
+    req.session.cart = null; // Delete a mongoose property object reference by setting it to null.
+    req.session.save(); // and save the change
+  }
+  req.session.loggedIn = false; // but we retain the session with a logged out state, since this is better for tracking, pratical and security reasons
+  await req.session.save(); // save the state
+  res.json({msg:'Logged out'});
+});
+
+// current user data
+app.get('/rest/user', (req, res)=>{
+  // check if there is a logged-in user and return that user
+  let response;
+  if(req.user._id){
+    response = req.user;
+    // never send the password back
+    //response.password = '******';
+  }else{
+    response = {message: 'Not logged in'};
+  }
+  res.json(response);
+});
+
 // start the express HTTP server
 app.listen('3000', ()=>{
     console.log('bilshoppen server is running on port 3000');

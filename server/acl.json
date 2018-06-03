@@ -11,5 +11,7 @@
     {"path":"/", "roles":[ {"role": "*", "methods": ["GET"]} ]},
     {"path":"/cart", "roles":[ {"role": "*", "methods": ["GET"]} ]},
     {"path":"/products", "roles":[ {"role": "*", "methods": ["GET"]} ]},
+    {"path":"/registration", "roles":[ {"role": "*", "methods": ["GET"]} ]},
+    {"path":"/login", "roles":[ {"role": "*", "methods": ["GET"]} ]},
     {"path":"/client/images/ferrari458italia.jpg", "roles":[ {"role": "*", "methods": ["GET"]} ]}
   ]
