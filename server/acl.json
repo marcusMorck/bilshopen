@@ -9,9 +9,9 @@
     {"path":"/rest/pay", "roles":[ {"role": "user", "methods": ["POST"]} ]},
     {"path":"/rest/cart", "roles":[ {"role": "*", "methods": ["*"]} ]},
     {"path":"/", "roles":[ {"role": "*", "methods": ["GET"]} ]},
-    {"path":"/cart", "roles":[ {"role": "*", "methods": ["GET"]} ]},
-    {"path":"/products", "roles":[ {"role": "*", "methods": ["GET"]} ]},
-    {"path":"/registration", "roles":[ {"role": "*", "methods": ["GET"]} ]},
-    {"path":"/login", "roles":[ {"role": "*", "methods": ["GET"]} ]},
-    {"path":"/client/images/ferrari458italia.jpg", "roles":[ {"role": "*", "methods": ["GET"]} ]}
+    {"path":"/shoppingvagn", "roles":[ {"role": "*", "methods": ["GET"]} ]},
+    {"path":"/produkter", "roles":[ {"role": "*", "methods": ["GET"]} ]},
+    {"path":"/registrering", "roles":[ {"role": "*", "methods": ["GET"]} ]},
+    {"path":"/loggain", "roles":[ {"role": "*", "methods": ["GET"]} ]}
+    
   ]
