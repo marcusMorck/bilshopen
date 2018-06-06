@@ -50,6 +50,37 @@ app.get(/^((?!rest).)*$/, async(req, res)=>{
   res.sendFile(path.normalize(__dirname + '/../client/index.html'));
 });
 
+app.post('/rest/pay', async(req, res)=>{
+  const userEmail = req.session.user.email;
+  let paymentSum = 0;
+
+  const cart = await Cart.findOne({_id: req.session.cart}).populate('items.product');
+
+  for(let item of cart.items){
+    const price = item.product.price * item.amount;
+
+    paymentSum += price;
+  }
+
+
+  const customer = await stripe.customers.create(
+      { email: userEmail }
+    ).catch(e=>console.error);
+
+  const source = await stripe.customers.createSource(customer.id, {
+      source: 'tok_visa'
+    }).catch(e=>console.error);
+
+  const charge = await stripe.charges.create({
+      amount: paymentSum * 100,
+      currency: 'sek',
+      customer: source.customer
+    }).catch(e=>console.error);
+
+    res.json(charge);
+    
+});
+
 // Products CRUD paths
 app.get('/rest/products', async(req, res)=>{
   let products = await Product.find();
