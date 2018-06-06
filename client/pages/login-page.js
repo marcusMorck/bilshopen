@@ -5,7 +5,7 @@ const LoginPageComponent = {
     </div>
     
     
-    `
+    `,
 
 
 

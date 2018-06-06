@@ -7,18 +7,27 @@
       <meta name="author" content="">
       <title>Bilshoppen - Vi har bilen för dig!</title>
       <!-- Bootstrap core CSS -->
-      <link href="/style/style.css" rel="stylesheet">
+     
       <link href="/style/bootstrap.min.css" rel="stylesheet">
       <!-- Custom styles for this template -->
-      
+      <link href="/style/style.css" rel="stylesheet">
   </head>
   <body>
         
     <div id="app">
-      <nav-menu></nav-menu>
+      <header>
+          <nav-menu></nav-menu>
+      </header>
       
-      <router-view></router-view>
-    
+      
+      
+        <router-view></router-view>
+        <footer class="py-5 bg-dark">
+          <div class="page-container container ">
+            <p class="m-0 text-center text-white">Copyright &copy; Bilshoppen 2018</p>
+          </div>
+          <!-- /.container -->
+        </footer>
     </div> <!-- end vue app -->
   
     <!-- Bootstrap core JavaScript
@@ -41,13 +50,17 @@
       <script src="components/registration.js"></script>
       <script src="components/login.js"></script>
       <script src="components/new-products.js"></script>
-      
+      <script src="components/single-product.js"></script>
+  
       <!-- page components -->
       <script src="pages/home-page.js"></script>
       <script src="pages/cart-page.js"></script>
       <script src="pages/product-page.js"></script>
       <script src="pages/login-page.js"></script>
       <script src="pages/registration-page.js"></script>
+      <script src="pages/admin-page.js"></script>
+      <script src="pages/single-product-page.js"></script>
+
       <!-- app -->
       <script defer src="client.js"></script>
   

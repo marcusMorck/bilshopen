@@ -8,6 +8,8 @@ Vue.component('cart-item', CartItemComponent);
 Vue.component('registration', RegistrationComponent);
 Vue.component('login', LoginComponent);
 Vue.component('new-products', NewProductComponent);
+Vue.component('single-product', SingleProductComponent);
+
 
 // Page components
 Vue.component('home-page', HomePageComponent);
@@ -15,6 +17,9 @@ Vue.component('cart-page', CartPageComponent);
 Vue.component('product-page', ProductPageComponent);
 Vue.component('registration-page', RegistrationComponent);
 Vue.component('login-page', LoginPageComponent);
+Vue.component('admin-page', AdminPageComponent);
+Vue.component('single-product-page', SingleProductPageComponent)
+
 
 
 
@@ -28,9 +33,11 @@ const router = new VueRouter({
   routes: [ // our frontend routes
     { path: '/', component: HomePageComponent },
     { path: '/shoppingvagn', component: CartPageComponent },
-    { path: '/produkter/*', component: ProductPageComponent },
+    { path: '/produkter', component: ProductPageComponent },
+    { path: '/produkter/:id', component: SingleProductPageComponent },
     { path: '/registrering', component: RegistrationComponent },
-    { path: '/loggain', component: LoginComponent }
+    { path: '/loggain', component: LoginComponent },
+    { path: '/admin', component: AdminPageComponent }
   ]
 });
 

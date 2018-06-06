@@ -1,7 +1,7 @@
 body{
     
     min-height:100vh;
-    
+    background-color: black;
   }
   .cart-item-amount input{
     max-width: 40px;
@@ -16,14 +16,10 @@ body{
     font-weight: bold;
   }
 
-  .navbar {
-    margin-bottom: 20px;
+  header {
+    margin-bottom: 100px;
   }
 
-  .test{
-    background-image: url('/client/images/ferrari458italia.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-  } 
+
 
  

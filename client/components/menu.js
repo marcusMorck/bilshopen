@@ -10,23 +10,18 @@ const MenuComponent = {
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/produkter">Produkter</a>
+            <router-link class="nav-link" to="/produkter">Produkter</router-link>
           </li>
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCars" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <router-link class="nav-link dropdown-toggle" to="#" id="navbarDropdownCars" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            Bilar
-          </a>
+          </router-link>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-            <a class="dropdown-item" href="portfolio-1-col.html">1 Column Portfolio</a>
-            <a class="dropdown-item" href="portfolio-2-col.html">2 Column Portfolio</a>
-            <a class="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
-            <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
-            <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
+            <router-link class="dropdown-item" to="#">Ferrari</router-link>
+            <router-link class="dropdown-item" to="#">Koenigsegg</router-link>
+            <router-link class="dropdown-item" to="#">Porsche</router-link>
           </div>
         </li>
-          <li class="nav-item">
-          <router-link class="nav-link" to="/products">Hem</router-link>
-          </li>
           <li class="nav-item">
           <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
